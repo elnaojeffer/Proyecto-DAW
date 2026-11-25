@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Restablecer contrasena - Sistema de Practicas</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="centrado">
+    <h1>Restablecer contrasena</h1>
+    <div id="avisos"></div>
+    <div id="invalido" hidden>
+      <div class="alerta error">El enlace no es valido o ya expiro.</div>
+      <a href="recuperar.html">Solicitar otro</a>
+    </div>
+    <form id="form-restablecer" hidden>
+      <label for="clave1">Nueva contrasena</label>
+      <input type="password" id="clave1" required minlength="8">
+      <label for="clave2">Repetir contrasena</label>
+      <input type="password" id="clave2" required minlength="8">
+      <p><button class="btn" type="submit">Guardar</button></p>
+    </form>
+  </main>
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/restablecer.js"></script>
+</body>
+</html>
