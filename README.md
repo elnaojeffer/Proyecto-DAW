@@ -10,7 +10,7 @@ Plataforma para administrar convenios, asignación de estudiantes, seguimiento d
 |----|--------|-------------|---------|
 | 1 | Gestión de usuarios y seguridad | Mathew Alexis Ruiz Veliz | — |
 | 2 | Gestión de empresas y convenios | Angela Mayerly Yagual Pintado | — |
-| 3 | Gestión de estudiantes y postulaciones | Ederson Steward Franco Carvajal | — |
+| 3 | Gestión de estudiantes y postulaciones | Ederson Steward Franco Carvajal | `Estudiantes-Postulaciones/` |
 | 4 | Asignación de prácticas y tutores | Fabian Johnny Gomez Beltran | — |
 | 5 | Seguimiento de horas prácticas | Christian Jesus Tovar Burgos | — |
 | 6 | Reportes y validación institucional | Jefferson Rolando Palma Coloma | `reportes-validacion/` |
@@ -22,6 +22,8 @@ Proyecto-DAW/
 ├── index.html              ← página de inicio
 ├── css/style.css           ← estilos compartidos por todos los módulos
 ├── assets/                 ← imágenes y recursos
+├── Estudiantes-Postulaciones/ ← módulo de estudiantes y postulaciones
+│   └── index.html
 └── reportes-validacion/    ← un módulo por carpeta
     ├── index.html
     ├── css/reportes.css
