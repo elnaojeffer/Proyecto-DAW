@@ -33,12 +33,13 @@
             <div class="tarjeta-resumen"><span>Periodo actual</span><strong id="periodName">2026-1</strong></div>
         </section>
 
+        <nav class="pestanas" role="tablist">
+            <button class="pestana activo" data-view="students">Estudiantes</button>
+            <button class="pestana" data-view="applications">Postulaciones</button>
+        </nav>
+
         <section class="tarjeta">
             <div class="barra">
-                <div class="pestanas" role="tablist">
-                    <button class="pestana activo" data-view="students">Estudiantes</button>
-                    <button class="pestana" data-view="applications">Postulaciones</button>
-                </div>
                 <input id="search" type="search" placeholder="Buscar..." aria-label="Buscar">
                 <button id="newButton" class="boton">+ Nuevo estudiante</button>
             </div>

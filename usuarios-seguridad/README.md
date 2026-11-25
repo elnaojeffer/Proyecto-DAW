@@ -26,7 +26,7 @@ restablecer.html      cambiar contrasena con el token
 css/usuarios.css      estilos propios del modulo (el resto viene de ../css/style.css)
 js/storage.js         "base de datos" (localStorage) y datos iniciales
 js/auth.js            sesion, permisos y bitacora
-js/ui.js              utilidades y submenu del modulo
+js/ui.js              utilidades y pestanas del modulo
 js/<pagina>.js        logica de cada pagina
 ```
 

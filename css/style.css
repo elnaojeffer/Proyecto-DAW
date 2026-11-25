@@ -77,32 +77,43 @@ a {
     color: #ffffff;
 }
 
-/* Submenú (páginas internas de un módulo) */
-.submenu {
+/* Pestañas internas de un módulo (páginas o vistas)
+   Ocupan todo el ancho y se reparten en partes iguales,
+   sin importar si son 2, 3 o 4 pestañas. */
+.pestanas {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     gap: 5px;
+    padding: 5px;
     margin-bottom: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
 }
 
-.submenu a {
-    padding: 8px 14px;
-    border-radius: 20px;
-    background-color: #ffffff;
+.pestanas > a,
+.pestanas > button {
+    flex: 1 1 140px;
+    margin: 0;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: transparent;
     color: var(--azul);
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
     text-decoration: none;
 }
 
-.submenu a.activo,
-.submenu a:hover {
-    background-color: var(--azul);
-    color: #ffffff;
+.pestanas > a:hover,
+.pestanas > button:hover {
+    background-color: var(--azul-claro);
+    opacity: 1;
 }
 
-.submenu .usuario {
-    margin-left: auto;
-    color: var(--texto-suave);
+.pestanas > .activo,
+.pestanas > .activo:hover {
+    background-color: var(--azul);
+    color: #ffffff;
 }
 
 /* Contenido */

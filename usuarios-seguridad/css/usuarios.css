@@ -46,3 +46,10 @@
 .matriz td:first-child {
     text-align: left;
 }
+
+/* Usuario conectado y cerrar sesión (encima de las pestañas) */
+.sesion {
+    margin: 0 0 10px;
+    text-align: right;
+    color: var(--texto-suave);
+}

@@ -45,7 +45,7 @@ nombre-modulo/
 - **Entrada del módulo:** siempre `index.html`.
 - **Estilos:** cargar primero `../css/style.css` y después `css/<modulo>.css`. No repetir en el módulo lo que ya está en el CSS compartido.
 - **Sin CSS ni JS dentro del HTML:** nada de `<style>` ni `<script>` con código; todo va en su archivo.
-- **Estructura de cada página:** `header.encabezado` → `nav.menu` (los 6 módulos) → `main.contenido` → `footer.pie`. Si el módulo tiene varias páginas, se agrega un `nav.submenu` dentro del `main`.
+- **Estructura de cada página:** `header.encabezado` → `nav.menu` (los 6 módulos) → `main.contenido` → `footer.pie`. Si el módulo tiene varias páginas o vistas, se agrega un `nav.pestanas` al inicio del `main`: las pestañas ocupan todo el ancho y se reparten en partes iguales.
 - **Clases compartidas** (definidas en `css/style.css`):
 
 | Uso | Clase |
@@ -56,6 +56,7 @@ nombre-modulo/
 | Búsqueda y acciones sobre una tabla | `barra` |
 | Mensajes | `alerta ok`, `alerta error`, `alerta info` |
 | Estado | `etiqueta activo`, `etiqueta inactivo` |
+| Pestañas internas del módulo | `nav.pestanas` con enlaces o botones; la actual lleva `activo` |
 | Ventana modal | `<dialog>` con los botones dentro de `acciones` |
 
 ## Cómo trabajar un módulo
