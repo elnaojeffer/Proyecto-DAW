@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes y Validación | GPP</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/reportes.css">
+</head>
+<body>
+    <header class="encabezado">
+        <h1>Gestión de Prácticas Preprofesionales</h1>
+        <p>Módulo: Reportes y validación institucional</p>
+    </header>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="#">Usuarios</a></li>
+            <li><a href="#">Empresas</a></li>
+            <li><a href="#">Estudiantes</a></li>
+            <li><a href="#">Asignaciones</a></li>
+            <li><a href="#">Horas</a></li>
+            <li><a href="index.html" class="activo">Reportes</a></li>
+        </ul>
+    </nav>
+
+    <main class="contenido">
+        <section class="tarjeta">
+            <h2>Validación institucional</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Estudiante</th>
+                        <th>Carrera</th>
+                        <th>Empresa</th>
+                        <th>Horas</th>
+                        <th>Evaluación</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>María López</td>
+                        <td>Ingeniería en Software</td>
+                        <td>Banco del Pacífico</td>
+                        <td>240 / 240</td>
+                        <td>9.2</td>
+                        <td>Pendiente</td>
+                    </tr>
+                    <tr>
+                        <td>Carlos Mora</td>
+                        <td>Tecnologías de la Información</td>
+                        <td>CNEL EP</td>
+                        <td>240 / 240</td>
+                        <td>8.5</td>
+                        <td>Aprobado</td>
+                    </tr>
+                    <tr>
+                        <td>Andrea Ruiz</td>
+                        <td>Ingeniería en Sistemas</td>
+                        <td>Claro Ecuador</td>
+                        <td>120 / 240</td>
+                        <td>6.4</td>
+                        <td>Rechazado</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="tarjeta">
+            <h2>Validar práctica</h2>
+            <form>
+                <label for="estudiante">Estudiante</label>
+                <select id="estudiante">
+                    <option>María López</option>
+                    <option>Carlos Mora</option>
+                    <option>Andrea Ruiz</option>
+                </select>
+
+                <label for="observacion">Observaciones</label>
+                <textarea id="observacion" rows="3"></textarea>
+
+                <button type="button">Aprobar</button>
+                <button type="button">Rechazar</button>
+            </form>
+        </section>
+
+        <section class="tarjeta">
+            <h2>Reportes</h2>
+            <form>
+                <label for="tipo">Tipo de reporte</label>
+                <select id="tipo">
+                    <option>Por estudiante</option>
+                    <option>Por empresa</option>
+                    <option>Por carrera</option>
+                    <option>Por periodo</option>
+                </select>
+
+                <button type="button">Exportar PDF</button>
+                <button type="button">Exportar Excel</button>
+                <button type="button">Generar certificado</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>© 2026 Grupo G05 · Jefferson Palma Coloma</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
