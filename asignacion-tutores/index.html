@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignación de Prácticas | GPP</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/asignacion.css">
+</head>
+<body>
+    <header class="encabezado">
+        <h1>Gestión de Prácticas Preprofesionales</h1>
+        <p>Módulo: Asignación de prácticas y tutores</p>
+    </header>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../gestionuser/index.html">Usuarios</a></li>
+            <li><a href="../Empresas-Convenios/empresas.html">Empresas</a></li>
+            <li><a href="#">Estudiantes</a></li>
+            <li><a href="index.html" class="activo">Asignaciones</a></li>
+            <li><a href="#">Horas</a></li>
+            <li><a href="../reportes-validacion/index.html">Reportes</a></li>
+        </ul>
+    </nav>
+
+    <main class="contenido">
+        <section class="tarjeta">
+            <h2>Nueva asignación</h2>
+            <form>
+                <label for="estudiante">Estudiante</label>
+                <select id="estudiante">
+                    <option>María López</option>
+                    <option>Carlos Mora</option>
+                    <option>Andrea Ruiz</option>
+                </select>
+
+                <label for="empresa">Empresa</label>
+                <select id="empresa">
+                    <option>Banco del Pacífico</option>
+                    <option>CNEL EP</option>
+                    <option>Claro Ecuador</option>
+                </select>
+
+                <label for="vacante">Vacante (cupos disponibles)</label>
+                <select id="vacante">
+                    <option>Desarrollo web (3 cupos)</option>
+                    <option>Soporte técnico (1 cupo)</option>
+                    <option>Redes (0 cupos)</option>
+                </select>
+
+                <label for="tutor-academico">Tutor académico</label>
+                <select id="tutor-academico">
+                    <option>Ing. Pedro Sánchez</option>
+                    <option>Ing. Laura Gómez</option>
+                </select>
+
+                <label for="tutor-empresarial">Tutor empresarial</label>
+                <select id="tutor-empresarial">
+                    <option>Lcdo. Jorge Ramírez</option>
+                    <option>Ing. Paola Vera</option>
+                </select>
+
+                <label for="plan">Plan de prácticas</label>
+                <textarea id="plan" rows="3"></textarea>
+
+                <button type="button">Asignar</button>
+            </form>
+        </section>
+
+        <section class="tarjeta">
+            <h2>Asignaciones registradas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Estudiante</th>
+                        <th>Empresa</th>
+                        <th>Vacante</th>
+                        <th>Tutor académico</th>
+                        <th>Tutor empresarial</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>María López</td>
+                        <td>Banco del Pacífico</td>
+                        <td>Desarrollo web</td>
+                        <td>Ing. Pedro Sánchez</td>
+                        <td>Lcdo. Jorge Ramírez</td>
+                        <td>Activa</td>
+                        <td>
+                            <button type="button">Reasignar</button>
+                            <button type="button">Cancelar</button>
+                            <button type="button">Carta</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Carlos Mora</td>
+                        <td>CNEL EP</td>
+                        <td>Soporte técnico</td>
+                        <td>Ing. Laura Gómez</td>
+                        <td>Ing. Paola Vera</td>
+                        <td>Activa</td>
+                        <td>
+                            <button type="button">Reasignar</button>
+                            <button type="button">Cancelar</button>
+                            <button type="button">Carta</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Andrea Ruiz</td>
+                        <td>Claro Ecuador</td>
+                        <td>Redes</td>
+                        <td>Ing. Pedro Sánchez</td>
+                        <td>Ing. Paola Vera</td>
+                        <td>Cancelada</td>
+                        <td>
+                            <button type="button">Reasignar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>© 2026 Grupo G05 · Fabian Johnny Gomez Beltran</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
