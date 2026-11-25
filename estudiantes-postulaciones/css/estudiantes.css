@@ -26,23 +26,9 @@
     font-size: 26px;
 }
 
-/* Pestañas Estudiantes / Postulaciones */
-.pestanas {
-    display: flex;
-    gap: 5px;
-    margin-right: auto;
-}
-
-.pestana {
-    margin-top: 0;
-    background-color: transparent;
-    color: var(--texto-suave);
-    font-weight: bold;
-}
-
-.pestana.activo {
-    background-color: var(--azul-claro);
-    color: var(--azul);
+/* Buscador a lo ancho de la barra */
+.barra input[type=search] {
+    flex: 1;
 }
 
 /* Botones de cada fila */
