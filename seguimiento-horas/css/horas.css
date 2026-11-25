@@ -1,0 +1,57 @@
+/* Estilos del módulo Seguimiento de horas prácticas */
+
+/* Datos del avance */
+.avance {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.dato {
+    background-color: var(--azul-claro);
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+}
+
+.dato span {
+    display: block;
+    color: var(--texto-suave);
+    font-size: 14px;
+}
+
+.dato strong {
+    font-size: 26px;
+    color: var(--azul);
+}
+
+/* Barra de porcentaje */
+.barra-avance {
+    height: 14px;
+    margin-top: 15px;
+    background-color: var(--borde);
+    border-radius: 7px;
+}
+
+.barra-avance div {
+    height: 100%;
+    background-color: var(--verde);
+    border-radius: 7px;
+}
+
+/* Estados del registro de horas */
+.etiqueta.aprobado {
+    background-color: #dcf3e5;
+    color: #1f7a43;
+}
+
+.etiqueta.pendiente {
+    background-color: #fff3d1;
+    color: #a17300;
+}
+
+.etiqueta.rechazado {
+    background-color: #fbe1e1;
+    color: #b03030;
+}
