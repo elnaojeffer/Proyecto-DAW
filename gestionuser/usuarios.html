@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Usuarios - Sistema de Practicas</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="menu" id="menu"></aside>
+    <main class="contenido">
+      <h1>Usuarios</h1>
+      <div id="avisos"></div>
+      <div class="barra">
+        <input type="text" id="buscar" placeholder="Buscar nombre, correo o cedula">
+        <button class="btn" id="btn-nuevo" type="button">Nuevo usuario</button>
+      </div>
+      <div class="tabla-wrap">
+        <table>
+          <thead>
+            <tr><th>Nombre</th><th>Correo</th><th>Cedula</th><th>Rol</th><th>Estado</th><th>Ultimo acceso</th><th></th></tr>
+          </thead>
+          <tbody id="tabla-cuerpo"></tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <dialog id="dlg-usuario">
+    <h2 id="dlg-titulo">Nuevo usuario</h2>
+    <div id="form-errores"></div>
+    <form id="form-usuario" novalidate>
+      <input type="hidden" id="f-id">
+      <label for="f-nombres">Nombres</label>
+      <input type="text" id="f-nombres">
+      <label for="f-apellidos">Apellidos</label>
+      <input type="text" id="f-apellidos">
+      <label for="f-cedula">Cedula (10 digitos, opcional)</label>
+      <input type="text" id="f-cedula" maxlength="10">
+      <label for="f-email">Correo</label>
+      <input type="email" id="f-email">
+      <label for="f-clave" id="lbl-clave">Contrasena</label>
+      <input type="password" id="f-clave" autocomplete="new-password">
+      <label for="f-rol">Rol</label>
+      <select id="f-rol"></select>
+      <label for="f-estado">Estado</label>
+      <select id="f-estado">
+        <option value="activo">Activo</option>
+        <option value="inactivo">Inactivo</option>
+      </select>
+      <div class="acciones-form">
+        <button type="button" class="btn gris" id="btn-cancelar">Cancelar</button>
+        <button type="submit" class="btn">Guardar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/usuarios.js"></script>
+</body>
+</html>
