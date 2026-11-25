@@ -1,0 +1,91 @@
+/* Estilos del módulo Gestión de estudiantes y postulaciones */
+
+/* Tarjetas de resumen */
+.resumen {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.tarjeta-resumen {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    border-left: 5px solid var(--azul);
+}
+
+.tarjeta-resumen span {
+    color: var(--texto-suave);
+    font-size: 14px;
+}
+
+.tarjeta-resumen strong {
+    display: block;
+    margin-top: 5px;
+    font-size: 26px;
+}
+
+/* Pestañas Estudiantes / Postulaciones */
+.pestanas {
+    display: flex;
+    gap: 5px;
+    margin-right: auto;
+}
+
+.pestana {
+    margin-top: 0;
+    background-color: transparent;
+    color: var(--texto-suave);
+    font-weight: bold;
+}
+
+.pestana.activo {
+    background-color: var(--azul-claro);
+    color: var(--azul);
+}
+
+/* Botones de cada fila */
+.acciones-fila {
+    display: flex;
+    gap: 5px;
+}
+
+/* Estados de las postulaciones */
+.etiqueta.aprobada {
+    background-color: #dcf3e5;
+    color: #1f7a43;
+}
+
+.etiqueta.pendiente {
+    background-color: #fff3d1;
+    color: #a17300;
+}
+
+.etiqueta.rechazada {
+    background-color: #fbe1e1;
+    color: #b03030;
+}
+
+.vacio {
+    text-align: center;
+    color: var(--texto-suave);
+}
+
+/* Formulario del modal en dos columnas */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 15px;
+    margin-bottom: 15px;
+}
+
+.campo.completo {
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}

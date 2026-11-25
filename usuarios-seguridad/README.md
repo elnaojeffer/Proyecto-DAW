@@ -23,10 +23,10 @@ roles.html            roles y permisos
 bitacora.html         bitacora
 recuperar.html        pedir enlace de recuperacion
 restablecer.html      cambiar contrasena con el token
-css/style.css         estilos del modulo
+css/usuarios.css      estilos propios del modulo (el resto viene de ../css/style.css)
 js/storage.js         "base de datos" (localStorage) y datos iniciales
 js/auth.js            sesion, permisos y bitacora
-js/ui.js              utilidades y menu lateral
+js/ui.js              utilidades y submenu del modulo
 js/<pagina>.js        logica de cada pagina
 ```
 
@@ -35,9 +35,9 @@ js/<pagina>.js        logica de cada pagina
 Cargar en este orden:
 
 ```html
-<script src="../gestion-usuarios-seguridad/js/storage.js"></script>
-<script src="../gestion-usuarios-seguridad/js/auth.js"></script>
-<script src="../gestion-usuarios-seguridad/js/ui.js"></script>
+<script src="../usuarios-seguridad/js/storage.js"></script>
+<script src="../usuarios-seguridad/js/auth.js"></script>
+<script src="../usuarios-seguridad/js/ui.js"></script>
 ```
 
 Y en su JS:

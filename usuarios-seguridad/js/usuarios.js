@@ -22,8 +22,8 @@
     cuerpo.innerHTML = filas.map(u => {
       const rol = db.roles.find(r => r.id === u.rolId);
       let acc = '';
-      if (can('usuarios', 'editar')) acc += '<button class="btn chico" data-accion="editar" data-id="' + u.id + '">Editar</button> ';
-      if (can('usuarios', 'eliminar')) acc += '<button class="btn chico rojo" data-accion="eliminar" data-id="' + u.id + '">Eliminar</button>';
+      if (can('usuarios', 'editar')) acc += '<button class="boton chico" data-accion="editar" data-id="' + u.id + '">Editar</button> ';
+      if (can('usuarios', 'eliminar')) acc += '<button class="boton chico peligro" data-accion="eliminar" data-id="' + u.id + '">Eliminar</button>';
       return '<tr>' +
         '<td>' + esc(u.apellidos + ' ' + u.nombres) + '</td>' +
         '<td>' + esc(u.email) + '</td>' +

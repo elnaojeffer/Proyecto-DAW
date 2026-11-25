@@ -21,7 +21,7 @@ function requierePermiso(modulo, accion) {
   if (!requiereLogin()) return false;
   if (!can(modulo, accion)) {
     document.body.innerHTML =
-      '<div class="centrado"><h1>Acceso denegado</h1>' +
+      '<div class="centrado"><h2>Acceso denegado</h2>' +
       '<div class="alerta error">No tienes permiso para ver esta pagina.</div>' +
       '<a href="dashboard.html">Volver al inicio</a></div>';
     return false;

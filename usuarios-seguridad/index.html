@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iniciar sesion - Sistema de Practicas</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/usuarios.css">
+</head>
+<body>
+  <header class="encabezado">
+    <h1>Gestión de Prácticas Preprofesionales</h1>
+    <p>Módulo: Gestión de usuarios y seguridad</p>
+  </header>
+
+  <nav class="menu">
+    <ul>
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="index.html" class="activo">Usuarios</a></li>
+      <li><a href="../empresas-convenios/index.html">Empresas</a></li>
+      <li><a href="../estudiantes-postulaciones/index.html">Estudiantes</a></li>
+      <li><a href="../asignacion-tutores/index.html">Asignaciones</a></li>
+      <li><a href="#">Horas</a></li>
+      <li><a href="../reportes-validacion/index.html">Reportes</a></li>
+    </ul>
+  </nav>
+
+  <main class="centrado">
+    <h2>Iniciar sesion</h2>
+    <div id="avisos"></div>
+    <form id="form-login">
+      <label for="email">Correo</label>
+      <input type="email" id="email" required autofocus>
+      <label for="clave">Contrasena</label>
+      <input type="password" id="clave" required>
+      <p><button class="boton" type="submit">Entrar</button></p>
+      <p><a href="recuperar.html">Olvide mi contrasena</a></p>
+    </form>
+    <div class="demo">
+      <div class="demo-titulo">Cuenta de prueba</div>
+      <div>Correo: <code>admin@practicas.local</code></div>
+      <div>Contrasena: <code>Admin12345</code></div>
+      <button type="button" class="boton secundario chico" id="btn-demo">Usar datos de prueba</button>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <p>© 2026 Grupo G05 · Mathew Alexis Ruiz Veliz</p>
+  </footer>
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

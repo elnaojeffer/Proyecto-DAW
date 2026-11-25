@@ -16,8 +16,8 @@
     cuerpo.innerHTML = db.roles.map(r => {
       const n = db.usuarios.filter(u => u.rolId === r.id).length;
       let acc = '';
-      if (can('roles', 'editar')) acc += '<button class="btn chico" data-accion="editar" data-id="' + r.id + '">Permisos</button> ';
-      if (can('roles', 'eliminar') && r.id !== 1) acc += '<button class="btn chico rojo" data-accion="eliminar" data-id="' + r.id + '">Eliminar</button>';
+      if (can('roles', 'editar')) acc += '<button class="boton chico" data-accion="editar" data-id="' + r.id + '">Permisos</button> ';
+      if (can('roles', 'eliminar') && r.id !== 1) acc += '<button class="boton chico peligro" data-accion="eliminar" data-id="' + r.id + '">Eliminar</button>';
       return '<tr><td>' + esc(r.nombre) + '</td><td>' + esc(r.descripcion) + '</td><td>' + n + '</td><td>' + acc + '</td></tr>';
     }).join('');
   }

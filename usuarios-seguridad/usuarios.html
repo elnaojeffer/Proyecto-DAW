@@ -4,19 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Usuarios - Sistema de Practicas</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/usuarios.css">
 </head>
 <body>
-  <div class="layout">
-    <aside class="menu" id="menu"></aside>
-    <main class="contenido">
-      <h1>Usuarios</h1>
+  <header class="encabezado">
+    <h1>Gestión de Prácticas Preprofesionales</h1>
+    <p>Módulo: Gestión de usuarios y seguridad</p>
+  </header>
+
+  <nav class="menu">
+    <ul>
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="index.html" class="activo">Usuarios</a></li>
+      <li><a href="../empresas-convenios/index.html">Empresas</a></li>
+      <li><a href="../estudiantes-postulaciones/index.html">Estudiantes</a></li>
+      <li><a href="../asignacion-tutores/index.html">Asignaciones</a></li>
+      <li><a href="#">Horas</a></li>
+      <li><a href="../reportes-validacion/index.html">Reportes</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenido">
+    <nav class="submenu" id="menu"></nav>
+    <section class="tarjeta">
+      <h2>Usuarios</h2>
       <div id="avisos"></div>
       <div class="barra">
         <input type="text" id="buscar" placeholder="Buscar nombre, correo o cedula">
-        <button class="btn" id="btn-nuevo" type="button">Nuevo usuario</button>
+        <button class="boton" id="btn-nuevo" type="button">Nuevo usuario</button>
       </div>
-      <div class="tabla-wrap">
+      <div class="tabla-contenedor">
         <table>
           <thead>
             <tr><th>Nombre</th><th>Correo</th><th>Cedula</th><th>Rol</th><th>Estado</th><th>Ultimo acceso</th><th></th></tr>
@@ -24,8 +42,12 @@
           <tbody id="tabla-cuerpo"></tbody>
         </table>
       </div>
-    </main>
-  </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>© 2026 Grupo G05 · Mathew Alexis Ruiz Veliz</p>
+  </footer>
 
   <dialog id="dlg-usuario">
     <h2 id="dlg-titulo">Nuevo usuario</h2>
@@ -49,9 +71,9 @@
         <option value="activo">Activo</option>
         <option value="inactivo">Inactivo</option>
       </select>
-      <div class="acciones-form">
-        <button type="button" class="btn gris" id="btn-cancelar">Cancelar</button>
-        <button type="submit" class="btn">Guardar</button>
+      <div class="acciones">
+        <button type="button" class="boton secundario" id="btn-cancelar">Cancelar</button>
+        <button type="submit" class="boton">Guardar</button>
       </div>
     </form>
   </dialog>
