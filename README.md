@@ -12,7 +12,7 @@ Plataforma para administrar convenios, asignación de estudiantes, seguimiento d
 | 2 | Gestión de empresas y convenios | Angela Mayerly Yagual Pintado | `empresas-convenios/` |
 | 3 | Gestión de estudiantes y postulaciones | Ederson Steward Franco Carvajal | `estudiantes-postulaciones/` |
 | 4 | Asignación de prácticas y tutores | Fabian Johnny Gomez Beltran | `asignacion-tutores/` |
-| 5 | Seguimiento de horas prácticas | Christian Jesus Tovar Burgos | `seguimiento-horas/` (pendiente) |
+| 5 | Seguimiento de horas prácticas | Christian Jesus Tovar Burgos | `seguimiento-horas/` |
 | 6 | Reportes y validación institucional | Jefferson Rolando Palma Coloma | `reportes-validacion/` |
 
 ## Estructura
@@ -26,6 +26,7 @@ Proyecto-DAW/
 ├── empresas-convenios/
 ├── estudiantes-postulaciones/
 ├── asignacion-tutores/
+├── seguimiento-horas/
 └── reportes-validacion/
 ```
 

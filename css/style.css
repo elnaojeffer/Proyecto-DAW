@@ -152,11 +152,6 @@ a {
     color: var(--azul);
 }
 
-.modulos .pendiente {
-    color: var(--texto-suave);
-    font-style: italic;
-}
-
 /* Barra de búsqueda y acciones */
 .barra {
     display: flex;
