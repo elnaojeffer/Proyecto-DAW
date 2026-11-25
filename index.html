@@ -15,6 +15,8 @@
     <nav class="menu">
         <ul>
             <li><a href="index.html" class="activo">Inicio</a></li>
+            <!-- Módulo 1 -->
+            <li><a href="gestionuser/index.html">Usuarios y seguridad</a></li>
             <li><a href="reportes-validacion/index.html">Reportes</a></li>
         </ul>
     </nav>
@@ -24,6 +26,21 @@
             <h2>Bienvenido</h2>
             <p>Plataforma para administrar convenios, asignación de estudiantes, seguimiento de horas prácticas,
                 reportes y validación institucional.</p>
+        </section>
+
+        <!-- Módulo 1: flujo -->
+        <section class="tarjeta">
+            <h2>Módulo 1: Gestión de usuarios y seguridad</h2>
+            <p>Flujo del módulo:</p>
+            <ol>
+                <li><strong>Inicio de sesión:</strong> el usuario entra con su correo y contraseña. Los intentos fallidos quedan en la bitácora.</li>
+                <li><strong>Recuperación de contraseña:</strong> si la olvida, genera un enlace válido por 1 hora y define una nueva clave.</li>
+                <li><strong>Inicio:</strong> el menú muestra solo las opciones que su rol tiene permitidas.</li>
+                <li><strong>Usuarios:</strong> se registran, modifican, eliminan y consultan usuarios, asignándoles un rol.</li>
+                <li><strong>Roles y permisos:</strong> se define qué puede ver, crear, editar o eliminar cada rol en cada módulo del sistema.</li>
+                <li><strong>Bitácora:</strong> se consultan las acciones realizadas, con filtros por acción y usuario.</li>
+            </ol>
+            <p><a href="gestionuser/index.html">Ir al módulo</a></p>
         </section>
     </main>
 
