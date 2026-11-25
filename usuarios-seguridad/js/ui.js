@@ -16,7 +16,7 @@ function fechaLocal(iso) {
   return iso ? new Date(iso).toLocaleString('es-EC') : '-';
 }
 
-// Menu lateral: cada modulo del grupo agrega su enlace en este arreglo
+// Submenu del modulo: paginas internas segun los permisos del rol
 function pintarMenu() {
   const s = sesion();
   const menu = document.getElementById('menu');
@@ -26,14 +26,12 @@ function pintarMenu() {
     ['usuarios.html', 'Usuarios', 'usuarios'],
     ['roles.html', 'Roles y permisos', 'roles'],
     ['bitacora.html', 'Bitacora', 'bitacora']
-    // ['empresas.html', 'Empresas y convenios', 'empresas'],
-    // ['estudiantes.html', 'Estudiantes', 'estudiantes'],
   ];
   const actual = location.pathname.split('/').pop() || 'index.html';
-  menu.innerHTML = '<h2>Practicas</h2>' +
+  menu.innerHTML =
     enlaces.filter(e => !e[2] || can(e[2], 'ver'))
       .map(e => '<a href="' + e[0] + '"' + (e[0] === actual ? ' class="activo"' : '') + '>' + e[1] + '</a>').join('') +
-    '<div class="menu-pie"><span>' + esc(s.nombre) + '</span><span>' + esc(s.rol) + '</span>' +
-    '<a href="#" id="btn-salir">Cerrar sesion</a></div>';
+    '<span class="usuario">' + esc(s.nombre) + ' (' + esc(s.rol) + ')</span>' +
+    '<a href="#" id="btn-salir">Cerrar sesion</a>';
   document.getElementById('btn-salir').addEventListener('click', e => { e.preventDefault(); logout(); });
 }

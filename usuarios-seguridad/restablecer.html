@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Restablecer contrasena - Sistema de Practicas</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/usuarios.css">
+</head>
+<body>
+  <header class="encabezado">
+    <h1>Gestión de Prácticas Preprofesionales</h1>
+    <p>Módulo: Gestión de usuarios y seguridad</p>
+  </header>
+
+  <nav class="menu">
+    <ul>
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="index.html" class="activo">Usuarios</a></li>
+      <li><a href="../empresas-convenios/index.html">Empresas</a></li>
+      <li><a href="../estudiantes-postulaciones/index.html">Estudiantes</a></li>
+      <li><a href="../asignacion-tutores/index.html">Asignaciones</a></li>
+      <li><a href="#">Horas</a></li>
+      <li><a href="../reportes-validacion/index.html">Reportes</a></li>
+    </ul>
+  </nav>
+
+  <main class="centrado">
+    <h2>Restablecer contrasena</h2>
+    <div id="avisos"></div>
+    <div id="invalido" hidden>
+      <div class="alerta error">El enlace no es valido o ya expiro.</div>
+      <a href="recuperar.html">Solicitar otro</a>
+    </div>
+    <form id="form-restablecer" hidden>
+      <label for="clave1">Nueva contrasena</label>
+      <input type="password" id="clave1" required minlength="8">
+      <label for="clave2">Repetir contrasena</label>
+      <input type="password" id="clave2" required minlength="8">
+      <p><button class="boton" type="submit">Guardar</button></p>
+    </form>
+  </main>
+
+  <footer class="pie">
+    <p>© 2026 Grupo G05 · Mathew Alexis Ruiz Veliz</p>
+  </footer>
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/restablecer.js"></script>
+</body>
+</html>

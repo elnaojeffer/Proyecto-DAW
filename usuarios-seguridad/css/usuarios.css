@@ -1,0 +1,48 @@
+/* Estilos del módulo Gestión de usuarios y seguridad */
+
+/* Login, recuperar y restablecer: tarjeta centrada */
+.centrado {
+    max-width: 420px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    border-top: 4px solid var(--azul);
+}
+
+.centrado h2 {
+    margin-top: 0;
+    color: var(--azul);
+}
+
+/* Caja con la cuenta de prueba */
+.demo {
+    margin-top: 20px;
+    padding: 12px 15px;
+    border: 1px dashed var(--azul);
+    border-radius: 8px;
+    background-color: var(--azul-claro);
+    font-size: 14px;
+}
+
+.demo-titulo {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.demo code {
+    background-color: #ffffff;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Matriz de permisos por rol */
+.matriz th,
+.matriz td {
+    text-align: center;
+}
+
+.matriz th:first-child,
+.matriz td:first-child {
+    text-align: left;
+}

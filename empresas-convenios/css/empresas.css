@@ -1,0 +1,6 @@
+/* Estilos del módulo Gestión de empresas y convenios */
+
+/* Separación entre cada tabla y el formulario de registro */
+.tarjeta table {
+  margin-bottom: 20px;
+}

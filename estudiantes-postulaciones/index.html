@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPP - Estudiantes y postulaciones</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/estudiantes.css">
+</head>
+<body>
+    <header class="encabezado">
+        <h1>Gestión de Prácticas Preprofesionales</h1>
+        <p>Módulo: Gestión de estudiantes y postulaciones</p>
+    </header>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../usuarios-seguridad/index.html">Usuarios</a></li>
+            <li><a href="../empresas-convenios/index.html">Empresas</a></li>
+            <li><a href="index.html" class="activo">Estudiantes</a></li>
+            <li><a href="../asignacion-tutores/index.html">Asignaciones</a></li>
+            <li><a href="#">Horas</a></li>
+            <li><a href="../reportes-validacion/index.html">Reportes</a></li>
+        </ul>
+    </nav>
+
+    <main class="contenido">
+        <section class="resumen" aria-label="Resumen">
+            <div class="tarjeta-resumen"><span>Estudiantes activos</span><strong id="activeCount">0</strong></div>
+            <div class="tarjeta-resumen"><span>Postulaciones</span><strong id="applicationCount">0</strong></div>
+            <div class="tarjeta-resumen"><span>Pendientes</span><strong id="pendingCount">0</strong></div>
+            <div class="tarjeta-resumen"><span>Periodo actual</span><strong id="periodName">2026-1</strong></div>
+        </section>
+
+        <section class="tarjeta">
+            <div class="barra">
+                <div class="pestanas" role="tablist">
+                    <button class="pestana activo" data-view="students">Estudiantes</button>
+                    <button class="pestana" data-view="applications">Postulaciones</button>
+                </div>
+                <input id="search" type="search" placeholder="Buscar..." aria-label="Buscar">
+                <button id="newButton" class="boton">+ Nuevo estudiante</button>
+            </div>
+            <div class="tabla-contenedor">
+                <table>
+                    <thead id="tableHead"></thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>© 2026 Grupo G05 · Ederson Steward Franco Carvajal</p>
+    </footer>
+
+    <dialog id="modal" aria-labelledby="modalTitle">
+        <h2 id="modalTitle">Nuevo estudiante</h2>
+        <form id="entityForm">
+            <div id="formFields" class="form-grid"></div>
+            <div class="acciones">
+                <button class="boton secundario close-cancel" type="button">Cancelar</button>
+                <button class="boton" type="submit">Guardar</button>
+            </div>
+        </form>
+    </dialog>
+
+    <script src="js/estudiantes.js"></script>
+</body>
+</html>
