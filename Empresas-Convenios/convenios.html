@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>GPP - Convenios y Vacantes</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <h1>Gestión de Prácticas Preprofesionales</h1>
+    <p>Módulo: Gestión de empresas y convenios</p>
+  </header>
+
+  <nav class="menu">
+    <a href="../index.html">Inicio</a>
+    <a href="#">Usuarios</a>
+    <a href="empresas.html">Empresas</a>
+    <a href="convenios.html" class="activo">Convenios y Vacantes</a>
+    <a href="#">Estudiantes</a>
+    <a href="#">Asignaciones</a>
+    <a href="#">Horas</a>
+    <a href="../reportes-validacion/index.html">Reportes</a>
+  </nav>
+
+  <main class="contenedor">
+
+    <!-- ENTIDAD 3: CONVENIO -->
+    <section class="tarjeta">
+      <h2>Convenios Institucionales</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Empresa</th>
+            <th>Fecha Inicio</th>
+            <th>Fecha Fin</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-convenios">
+          <tr>
+            <td>CONV-2026-01</td>
+            <td>Banco del Pacífico</td>
+            <td>2026-01-15</td>
+            <td>2028-01-15</td>
+            <td>Vigente</td>
+          </tr>
+          <tr>
+            <td>CONV-2026-02</td>
+            <td>CNEL EP</td>
+            <td>2026-03-01</td>
+            <td>2027-03-01</td>
+            <td>Vigente</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Registrar Convenio</h2>
+      <form id="form-convenio">
+        <div class="campo">
+          <label>Código del Convenio</label>
+          <input type="text" id="codigoConv" placeholder="Ej: CONV-2026-03" required>
+        </div>
+        <div class="campo">
+          <label>Empresa</label>
+          <select id="empresaConv" required>
+            <option value="Banco del Pacífico">Banco del Pacífico</option>
+            <option value="CNEL EP">CNEL EP</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label>Fecha de Inicio</label>
+          <input type="date" id="fechaInicio" required>
+        </div>
+        <div class="campo">
+          <label>Fecha de Finalización</label>
+          <input type="date" id="fechaFin" required>
+        </div>
+        <div class="campo">
+          <label>Estado</label>
+          <select id="estadoConv">
+            <option value="Vigente">Vigente</option>
+            <option value="En trámite">En trámite</option>
+            <option value="Vencido">Vencido</option>
+          </select>
+        </div>
+        <button type="submit" class="boton">Guardar Convenio</button>
+      </form>
+    </section>
+
+    <!-- ENTIDAD 4: VACANTE -->
+    <section class="tarjeta">
+      <h2>Vacantes Disponibles</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Empresa</th>
+            <th>Puesto / Área</th>
+            <th>Cupos</th>
+            <th>Modalidad</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-vacantes">
+          <tr>
+            <td>Banco del Pacífico</td>
+            <td>Desarrollo Web Frontend</td>
+            <td>3</td>
+            <td>Híbrida</td>
+          </tr>
+          <tr>
+            <td>CNEL EP</td>
+            <td>Soporte Técnico y Redes</td>
+            <td>2</td>
+            <td>Presencial</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Registrar Vacante</h2>
+      <form id="form-vacante">
+        <div class="campo">
+          <label>Empresa</label>
+          <select id="empresaVac" required>
+            <option value="Banco del Pacífico">Banco del Pacífico</option>
+            <option value="CNEL EP">CNEL EP</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label>Puesto o Área de Práctica</label>
+          <input type="text" id="puestoVac" placeholder="Ej: Base de Datos y Backend" required>
+        </div>
+        <div class="campo">
+          <label>Cantidad de Cupos</label>
+          <input type="number" id="cuposVac" min="1" placeholder="Ej: 2" required>
+        </div>
+        <div class="campo">
+          <label>Modalidad</label>
+          <select id="modalidadVac">
+            <option value="Presencial">Presencial</option>
+            <option value="Híbrida">Híbrida</option>
+            <option value="Remota">Remota</option>
+          </select>
+        </div>
+        <button type="submit" class="boton">Guardar Vacante</button>
+      </form>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

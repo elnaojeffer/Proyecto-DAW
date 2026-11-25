@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>GPP - Empresas y Convenios</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <h1>Gestión de Prácticas Preprofesionales</h1>
+    <p>Módulo: Gestión de empresas y convenios</p>
+  </header>
+
+  <nav class="menu">
+    <a href="../index.html">Inicio</a>
+    <a href="#">Usuarios</a>
+    <a href="empresas.html" class="activo">Empresas</a>
+    <a href="convenios.html">Convenios y Vacantes</a>
+    <a href="#">Estudiantes</a>
+    <a href="#">Asignaciones</a>
+    <a href="#">Horas</a>
+    <a href="../reportes-validacion/index.html">Reportes</a>
+  </nav>
+
+  <main class="contenedor">
+
+    <!-- ENTIDAD 1: EMPRESA -->
+    <section class="tarjeta">
+      <h2>Listado de Empresas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>RUC</th>
+            <th>Empresa</th>
+            <th>Sector</th>
+            <th>Dirección</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-empresas">
+          <tr>
+            <td>0990005737001</td>
+            <td>Banco del Pacífico</td>
+            <td>Banca y Finanzas</td>
+            <td>Av. Francisco de Orellana</td>
+          </tr>
+          <tr>
+            <td>0968599020001</td>
+            <td>CNEL EP</td>
+            <td>Energía Eléctrica</td>
+            <td>Av. del Bombero, Ceibos</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Registrar Empresa</h2>
+      <form id="form-empresa">
+        <div class="campo">
+          <label>RUC</label>
+          <input type="text" id="ruc" placeholder="Ej: 0991234567001" required>
+        </div>
+        <div class="campo">
+          <label>Nombre de la Empresa</label>
+          <input type="text" id="nombreEmpresa" placeholder="Ej: Claro Ecuador" required>
+        </div>
+        <div class="campo">
+          <label>Sector</label>
+          <input type="text" id="sector" placeholder="Ej: Telecomunicaciones" required>
+        </div>
+        <div class="campo">
+          <label>Dirección</label>
+          <input type="text" id="direccion" placeholder="Ej: Av. Amazonas y Naciones Unidas" required>
+        </div>
+        <button type="submit" class="boton">Guardar Empresa</button>
+      </form>
+    </section>
+
+    <!-- ENTIDAD 2: REPRESENTANTE -->
+    <section class="tarjeta">
+      <h2>Representantes de Empresas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Empresa</th>
+            <th>Representante</th>
+            <th>Cargo</th>
+            <th>Correo</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-representantes">
+          <tr>
+            <td>Banco del Pacífico</td>
+            <td>Ing. Roberto Méndez</td>
+            <td>Jefe de Talento Humano</td>
+            <td>rmendez@pacifico.fin.ec</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Registrar Representante</h2>
+      <form id="form-representante">
+        <div class="campo">
+          <label>Empresa</label>
+          <select id="empresaRep" required>
+            <option value="Banco del Pacífico">Banco del Pacífico</option>
+            <option value="CNEL EP">CNEL EP</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label>Nombre del Representante</label>
+          <input type="text" id="nombreRep" placeholder="Ej: Lic. Laura Gómez" required>
+        </div>
+        <div class="campo">
+          <label>Cargo</label>
+          <input type="text" id="cargoRep" placeholder="Ej: Coordinadora de RRHH" required>
+        </div>
+        <div class="campo">
+          <label>Correo electrónico</label>
+          <input type="email" id="correoRep" placeholder="Ej: lgomez@empresa.com" required>
+        </div>
+        <button type="submit" class="boton">Guardar Representante</button>
+      </form>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
